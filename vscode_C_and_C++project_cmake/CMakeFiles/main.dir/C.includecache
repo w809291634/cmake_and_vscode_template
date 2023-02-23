@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/zonesion/vscode_project_cmake/template/src/TestWrapper.h
+
+/home/zonesion/vscode_project_cmake/template/src/main.c
+TestWrapper.h
+/home/zonesion/vscode_project_cmake/template/src/TestWrapper.h
+

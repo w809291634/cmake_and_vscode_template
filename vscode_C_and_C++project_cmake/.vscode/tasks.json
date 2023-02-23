@@ -1,0 +1,50 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "type": "shell",
+        "label": "cmake release",
+        "command": "cmake",
+        "args": [ "CMakeLists.txt","-DDEBUG_TARGET=0"],
+        "options": {
+          "cwd": "${workspaceFolder}"
+        },
+        "group": "build"
+      },
+      {
+        "type": "shell",
+        "label": "make release",
+        "command": ["make"],
+        "args": [],
+        "options": {
+          "cwd": "${workspaceFolder}"
+        },
+        "group": "build",
+        "dependsOn":["cmake release"],      ///指定，在执行make之前，需先执行cmake release
+      },
+
+      
+      {
+        "type": "shell",
+        "label": "cmake debug",
+        "command": "cmake",
+        "args": [ "CMakeLists.txt","-DDEBUG_TARGET=1"],
+        "options": {
+          "cwd": "${workspaceFolder}"
+        },
+        "group": "build"
+      },
+      {
+        "type": "shell",
+        "label": "make debug",
+        "command": "make",
+        "args": [],
+        "options": {
+          "cwd": "${workspaceFolder}"
+        },
+        "group": "build",
+        "dependsOn":["cmake debug"],      ///指定，在执行make之前，需先执行cmake debug
+      },
+    ]
+  }
+  

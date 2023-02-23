@@ -1,0 +1,1 @@
+gcc   -rdynamic CMakeFiles/main.dir/template/src/main.c.o  -o release/main -Wl,-rpath,/home/zonesion/vscode_project_cmake libtemplate.so 

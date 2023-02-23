@@ -1,0 +1,7 @@
+/home/zonesion/vscode_project_cmake/CMakeFiles/install/strip.dir
+/home/zonesion/vscode_project_cmake/CMakeFiles/install/local.dir
+/home/zonesion/vscode_project_cmake/CMakeFiles/edit_cache.dir
+/home/zonesion/vscode_project_cmake/CMakeFiles/template.dir
+/home/zonesion/vscode_project_cmake/CMakeFiles/rebuild_cache.dir
+/home/zonesion/vscode_project_cmake/CMakeFiles/list_install_components.dir
+/home/zonesion/vscode_project_cmake/CMakeFiles/install.dir
