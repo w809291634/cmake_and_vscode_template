@@ -1,0 +1,46 @@
+{
+    "configurations": [
+      {
+        "name": "run release",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/release/main",
+        "args": ["-r", "-debug"],
+        "stopAtEntry": false,
+        "cwd": "${workspaceFolder}/release",
+        "environment": [],
+        "externalConsole": false,
+        "MIMode": "gdb",
+        "setupCommands": [
+            {
+                "description": "为 gdb 启用整齐打印",
+                "text": "-enable-pretty-printing",
+                "ignoreFailures": true
+            }
+        ],
+        "preLaunchTask": "make release"
+      },
+      {
+        "name": "run debug",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/debug/main_D",
+        "args": ["./template.png",],
+        "stopAtEntry": true,
+        "cwd": "${workspaceFolder}/debug",
+        "environment": [],
+        "externalConsole": false,
+        "MIMode": "gdb",
+        "setupCommands": [
+          {
+              "description": "为 gdb 启用整齐打印",
+              "text": "-enable-pretty-printing",
+              "ignoreFailures": true
+          }
+        ],
+        "preLaunchTask": "make debug"
+      }
+  
+    ]
+  }
+  

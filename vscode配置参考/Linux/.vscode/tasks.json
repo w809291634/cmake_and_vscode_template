@@ -1,0 +1,85 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "cmake clean",
+            "command": "rm -rf * ",
+            "args": [],
+            "options": {
+                "cwd": "${workspaceFolder}/navigation-kinetic-devel/dwa_local_planner/build"
+        },
+            "group": "build"
+        },
+        {
+            "type": "shell",
+            "label": "cmake release",
+            "command": "cmake",
+            "args": [ "..","-DDEBUG_TARGET=0"],
+            "options": {
+                "cwd": "${workspaceFolder}/navigation-kinetic-devel/dwa_local_planner/build"
+        },
+            "group": "build",
+            "dependsOn":["cmake clean"]   
+        },
+        {
+            "type": "shell",
+            "label": "make release",
+            "command": "make",
+            "args": [],
+            "options": {
+                "cwd": "${workspaceFolder}/navigation-kinetic-devel/dwa_local_planner/build"
+        },
+            "group": "build",
+            "dependsOn":["cmake release"]   
+        },
+        {
+            "type": "shell",
+            "label": "cp so",
+            "command": "sudo cp libdwa_local_planner.so /opt/ros/kinetic/lib/libdwa_local_planner.so",
+            "args": [],
+            "options": {
+                "cwd": "${workspaceFolder}/navigation-kinetic-devel/dwa_local_planner/build/devel/lib"
+        },
+            "group": "build",
+            "dependsOn":["make release"]   
+        },
+
+
+     
+        {
+            "type": "shell",
+            "label": "cmake clean",
+            "command": "rm -rf * ",
+            "args": [],
+            "options": {
+                "cwd": "${workspaceFolder}/navigation-kinetic-devel/dwa_local_planner/build"
+        },
+            "group": "build"
+        },
+        {
+            "type": "shell",
+            "label": "cmake debug",
+            "command": "cmake",
+            "args": [ "..","-DDEBUG_TARGET=1"],
+            "options": {
+                "cwd": "${workspaceFolder}/navigation-kinetic-devel/dwa_local_planner/build"
+            },
+            "group": "build",
+            "dependsOn":["cmake clean"]    
+        },
+        {
+            "type": "shell",
+            "label": "make debug",
+            "command": "make",
+            "args": [],
+            "options": {
+            "cwd": "${workspaceFolder}/navigation-kinetic-devel/dwa_local_planner/build"
+            },
+            "group": "build",
+            "dependsOn":["cmake debug"]   
+        }
+    ]
+}

@@ -1,0 +1,56 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "type": "shell",
+        "label": "make release",
+        "command": "make",
+        "args": [],
+        "options": {
+          "cwd": "${workspaceFolder}/marm_visual_control"
+        },
+        "group": "build"
+      },
+      {
+        "type": "shell",
+        "label": "make debug",
+        "command": "make",
+        "args": ["BUILD_VER=DEBUG"],
+        "options": {
+          "cwd": "${workspaceFolder}/marm_visual_control"
+        },
+        "group": "build"
+      },
+      {
+        "type": "shell",
+        "label": "make clean",
+        "command": "make",
+        "args": ["clean_all"],
+        "options": {
+          "cwd": "${workspaceFolder}/marm_visual_control"
+        },
+        "group": "build"
+      },
+      {
+        "type": "shell",
+        "label": "make clean debug",
+        "command": "make -f debug.makefile",
+        "args": ["clean_all"],
+        "options": {
+          "cwd": "${workspaceFolder}/marm_visual_control"
+        },
+        "group": "build"
+      },
+      {
+        "type": "shell",
+        "label": "make clean cache",
+        "command": "make",
+        "args": ["clean_all_cache"],
+        "options": {
+          "cwd": "${workspaceFolder}/project"
+        },
+        "group": "build"
+      }
+    ]
+  }
+  
