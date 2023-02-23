@@ -6,9 +6,11 @@ PROJECT(marm_visual_control)
 # 找opencv package----------记得添加这个
 find_package(OpenCV REQUIRED) 
 
-set(CMAKE_C_COMPILER "gcc")
+set(CMAKE_C_COMPILER "g++")
 set(CMAKE_CXX_COMPILER "g++")
 set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_VERBOSE_MAKEFILE ON)                # 显示makefile的编译详细信息
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -O2 -Wall -std=c++11")
 
 # 设置工程文件夹路径
 set(PROJECT_PATH ${PROJECT_SOURCE_DIR}/marm_visual_control)
