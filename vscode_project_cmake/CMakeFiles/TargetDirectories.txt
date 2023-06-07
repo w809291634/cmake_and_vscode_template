@@ -1,0 +1,5 @@
+/home/zonesion/QT/cmake_and_vscode_template/vscode_project_cmake/CMakeFiles/rebuild_cache.dir
+/home/zonesion/QT/cmake_and_vscode_template/vscode_project_cmake/CMakeFiles/main_D.dir
+/home/zonesion/QT/cmake_and_vscode_template/vscode_project_cmake/CMakeFiles/edit_cache.dir
+/home/zonesion/QT/cmake_and_vscode_template/vscode_project_cmake/marm_visual_control/src/CMakeFiles/rebuild_cache.dir
+/home/zonesion/QT/cmake_and_vscode_template/vscode_project_cmake/marm_visual_control/src/CMakeFiles/edit_cache.dir

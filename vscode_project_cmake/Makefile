@@ -114,17 +114,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named main
+# Target rules for targets named main_D
 
 # Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 main
-.PHONY : main
+main_D: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 main_D
+.PHONY : main_D
 
 # fast build rule for target.
-main/fast:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
+main_D/fast:
+	$(MAKE) -f CMakeFiles/main_D.dir/build.make CMakeFiles/main_D.dir/build
+.PHONY : main_D/fast
 
 marm_visual_control/src/main.o: marm_visual_control/src/main.cpp.o
 
@@ -132,7 +132,7 @@ marm_visual_control/src/main.o: marm_visual_control/src/main.cpp.o
 
 # target to build an object file
 marm_visual_control/src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/marm_visual_control/src/main.cpp.o
+	$(MAKE) -f CMakeFiles/main_D.dir/build.make CMakeFiles/main_D.dir/marm_visual_control/src/main.cpp.o
 .PHONY : marm_visual_control/src/main.cpp.o
 
 marm_visual_control/src/main.i: marm_visual_control/src/main.cpp.i
@@ -141,7 +141,7 @@ marm_visual_control/src/main.i: marm_visual_control/src/main.cpp.i
 
 # target to preprocess a source file
 marm_visual_control/src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/marm_visual_control/src/main.cpp.i
+	$(MAKE) -f CMakeFiles/main_D.dir/build.make CMakeFiles/main_D.dir/marm_visual_control/src/main.cpp.i
 .PHONY : marm_visual_control/src/main.cpp.i
 
 marm_visual_control/src/main.s: marm_visual_control/src/main.cpp.s
@@ -150,7 +150,7 @@ marm_visual_control/src/main.s: marm_visual_control/src/main.cpp.s
 
 # target to generate assembly for a file
 marm_visual_control/src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/marm_visual_control/src/main.cpp.s
+	$(MAKE) -f CMakeFiles/main_D.dir/build.make CMakeFiles/main_D.dir/marm_visual_control/src/main.cpp.s
 .PHONY : marm_visual_control/src/main.cpp.s
 
 # Help Target
@@ -160,7 +160,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... main"
+	@echo "... main_D"
 	@echo "... edit_cache"
 	@echo "... marm_visual_control/src/main.o"
 	@echo "... marm_visual_control/src/main.i"
