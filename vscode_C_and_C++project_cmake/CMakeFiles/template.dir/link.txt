@@ -1,1 +1,0 @@
-g++ -fPIC   -shared -Wl,-soname,libtemplate.so -o libtemplate.so CMakeFiles/template.dir/template/src/test_class.cpp.o CMakeFiles/template.dir/template/src/TestWrapper.c.o 

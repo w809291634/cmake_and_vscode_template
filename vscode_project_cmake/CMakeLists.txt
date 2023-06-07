@@ -30,8 +30,6 @@ else()
     set(TARGET_NAME main)
 endif()
 
-# 
-
 # 添加子目录
 include_directories("${PROJECT_SOURCE_DIR}/include")
 add_subdirectory(${PROJECT_PATH}/src)

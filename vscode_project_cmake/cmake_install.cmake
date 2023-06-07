@@ -1,4 +1,4 @@
-# Install script for directory: /home/zonesion/vscode_project_cmake
+# Install script for directory: /home/zonesion/QT/cmake_and_vscode_template/vscode_project_cmake
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/zonesion/vscode_project_cmake/marm_visual_control/src/cmake_install.cmake")
+  include("/home/zonesion/QT/cmake_and_vscode_template/vscode_project_cmake/marm_visual_control/src/cmake_install.cmake")
 
 endif()
 
@@ -51,5 +51,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/zonesion/vscode_project_cmake/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/zonesion/QT/cmake_and_vscode_template/vscode_project_cmake/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

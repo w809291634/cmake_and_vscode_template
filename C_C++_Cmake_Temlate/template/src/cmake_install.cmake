@@ -1,4 +1,4 @@
-# Install script for directory: /home/zonesion/QT/cmake_and_vscode_template/vscode_project_cmake/marm_visual_control/src
+# Install script for directory: /home/zonesion/vscode_C_and_C++project_cmake/template/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

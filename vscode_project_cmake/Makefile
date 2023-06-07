@@ -23,6 +23,9 @@ SUFFIXES =
 .SUFFIXES: .hpux_make_needs_suffix_list
 
 
+# Produce verbose output by default.
+VERBOSE = 1
+
 # Suppress display of executed commands.
 $(VERBOSE).SILENT:
 
@@ -48,10 +51,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/zonesion/vscode_project_cmake
+CMAKE_SOURCE_DIR = /home/zonesion/QT/cmake_and_vscode_template/vscode_project_cmake
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/zonesion/vscode_project_cmake
+CMAKE_BINARY_DIR = /home/zonesion/QT/cmake_and_vscode_template/vscode_project_cmake
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +83,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zonesion/vscode_project_cmake/CMakeFiles /home/zonesion/vscode_project_cmake/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zonesion/QT/cmake_and_vscode_template/vscode_project_cmake/CMakeFiles /home/zonesion/QT/cmake_and_vscode_template/vscode_project_cmake/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zonesion/vscode_project_cmake/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zonesion/QT/cmake_and_vscode_template/vscode_project_cmake/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,17 +114,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named main_D
+# Target rules for targets named main
 
 # Build rule for target.
-main_D: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 main_D
-.PHONY : main_D
+main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 main
+.PHONY : main
 
 # fast build rule for target.
-main_D/fast:
-	$(MAKE) -f CMakeFiles/main_D.dir/build.make CMakeFiles/main_D.dir/build
-.PHONY : main_D/fast
+main/fast:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
+.PHONY : main/fast
 
 marm_visual_control/src/main.o: marm_visual_control/src/main.cpp.o
 
@@ -129,7 +132,7 @@ marm_visual_control/src/main.o: marm_visual_control/src/main.cpp.o
 
 # target to build an object file
 marm_visual_control/src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/main_D.dir/build.make CMakeFiles/main_D.dir/marm_visual_control/src/main.cpp.o
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/marm_visual_control/src/main.cpp.o
 .PHONY : marm_visual_control/src/main.cpp.o
 
 marm_visual_control/src/main.i: marm_visual_control/src/main.cpp.i
@@ -138,7 +141,7 @@ marm_visual_control/src/main.i: marm_visual_control/src/main.cpp.i
 
 # target to preprocess a source file
 marm_visual_control/src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/main_D.dir/build.make CMakeFiles/main_D.dir/marm_visual_control/src/main.cpp.i
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/marm_visual_control/src/main.cpp.i
 .PHONY : marm_visual_control/src/main.cpp.i
 
 marm_visual_control/src/main.s: marm_visual_control/src/main.cpp.s
@@ -147,7 +150,7 @@ marm_visual_control/src/main.s: marm_visual_control/src/main.cpp.s
 
 # target to generate assembly for a file
 marm_visual_control/src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/main_D.dir/build.make CMakeFiles/main_D.dir/marm_visual_control/src/main.cpp.s
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/marm_visual_control/src/main.cpp.s
 .PHONY : marm_visual_control/src/main.cpp.s
 
 # Help Target
@@ -157,8 +160,8 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... main"
 	@echo "... edit_cache"
-	@echo "... main_D"
 	@echo "... marm_visual_control/src/main.o"
 	@echo "... marm_visual_control/src/main.i"
 	@echo "... marm_visual_control/src/main.s"
